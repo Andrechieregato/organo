@@ -39,33 +39,33 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Fill in the data to create the employee card</h2>
                 <Campo
                     obrigatorio
-                    label="Nome"
+                    label="Name"
                     type = "text"
-                    placeholder="Digite seu nome" 
+                    placeholder="Type your name" 
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
                 <Campo
                     obrigatorio
-                    label="Cargo"
+                    label="Job Title"
                     type = "text"
-                    placeholder="Digite seu cargo" 
+                    placeholder="Enter your position"
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
                 <Campo
-                    label="Imagem"
+                    label="Image"
                     type = "text"
-                    placeholder="Digite o endereço da imagem" 
+                    placeholder="Enter your image" 
                     valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa
                     obrigatorio={true}
-                    label="Time"
+                    label="Team"
                     itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
